@@ -525,6 +525,16 @@ src="https://www.facebook.com/tr?id=1276575164562361&ev=PageView&noscript=1"
   setInterval(update, 1000);
 })();
 </script>
+<script>
+  document.querySelectorAll('a[href*="kiwify"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      fbq('track', 'InitiateCheckout', {
+        value: 27.00,
+        currency: 'BRL'
+      });
+    });
+  });
+</script>
 </body>
 </html>
 
